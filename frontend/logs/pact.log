@@ -1,0 +1,60 @@
+I, [2020-02-02T10:53:08.321762 #29520]  INFO -- : Verifying - interactions matched
+I, [2020-02-02T10:53:08.328015 #29520]  INFO -- : Cleared interactions
+I, [2020-02-02T10:53:08.334261 #29520]  INFO -- : Registered expected interaction GET /objects
+D, [2020-02-02T10:53:08.334452 #29520] DEBUG -- : {
+  "description": "get objects",
+  "providerState": "have objects",
+  "request": {
+    "method": "GET",
+    "path": "/objects"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "body": {
+      "json_class": "Pact::ArrayLike",
+      "contents": {
+        "id": 1,
+        "name": "Object #1"
+      },
+      "min": 1
+    }
+  }
+}
+I, [2020-02-02T10:53:08.349057 #29520]  INFO -- : Received request GET /objects
+D, [2020-02-02T10:53:08.349156 #29520] DEBUG -- : {
+  "path": "/objects",
+  "query": "",
+  "method": "get",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Referer": "http://localhost/",
+    "User-Agent": "Mozilla/5.0 (darwin) AppleWebKit/537.36 (KHTML, like Gecko) jsdom/11.12.0",
+    "Accept-Language": "en",
+    "Origin": "http://localhost",
+    "Host": "127.0.0.1:8801",
+    "Accept-Encoding": "gzip, deflate",
+    "Connection": "close",
+    "Version": "HTTP/1.1"
+  }
+}
+I, [2020-02-02T10:53:08.349435 #29520]  INFO -- : Found matching response for GET /objects
+D, [2020-02-02T10:53:08.349498 #29520] DEBUG -- : {
+  "status": 200,
+  "headers": {
+    "Content-Type": "application/json"
+  },
+  "body": {
+    "json_class": "Pact::ArrayLike",
+    "contents": {
+      "id": 1,
+      "name": "Object #1"
+    },
+    "min": 1
+  }
+}
+I, [2020-02-02T10:53:08.363476 #29520]  INFO -- : Verifying - interactions matched
+I, [2020-02-02T10:53:08.366357 #29520]  INFO -- : Cleared interactions
+I, [2020-02-02T10:53:08.369807 #29520]  INFO -- : Writing pact for backend to /Users/vadimdez/Documents/my_dev/pact-testing/frontend/pacts/frontend-backend.json

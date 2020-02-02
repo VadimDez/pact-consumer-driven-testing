@@ -1,7 +1,7 @@
-I, [2020-02-02T10:53:08.321762 #29520]  INFO -- : Verifying - interactions matched
-I, [2020-02-02T10:53:08.328015 #29520]  INFO -- : Cleared interactions
-I, [2020-02-02T10:53:08.334261 #29520]  INFO -- : Registered expected interaction GET /objects
-D, [2020-02-02T10:53:08.334452 #29520] DEBUG -- : {
+I, [2020-02-02T12:48:34.102520 #31903]  INFO -- : Verifying - interactions matched
+I, [2020-02-02T12:48:34.107673 #31903]  INFO -- : Cleared interactions
+I, [2020-02-02T12:48:34.113600 #31903]  INFO -- : Registered expected interaction GET /objects
+D, [2020-02-02T12:48:34.113804 #31903] DEBUG -- : {
   "description": "get objects",
   "providerState": "have objects",
   "request": {
@@ -11,7 +11,7 @@ D, [2020-02-02T10:53:08.334452 #29520] DEBUG -- : {
   "response": {
     "status": 200,
     "headers": {
-      "Content-Type": "application/json"
+      "Content-Type": "application/json; charset=utf-8"
     },
     "body": {
       "json_class": "Pact::ArrayLike",
@@ -23,8 +23,8 @@ D, [2020-02-02T10:53:08.334452 #29520] DEBUG -- : {
     }
   }
 }
-I, [2020-02-02T10:53:08.349057 #29520]  INFO -- : Received request GET /objects
-D, [2020-02-02T10:53:08.349156 #29520] DEBUG -- : {
+I, [2020-02-02T12:48:34.137185 #31903]  INFO -- : Received request GET /objects
+D, [2020-02-02T12:48:34.137303 #31903] DEBUG -- : {
   "path": "/objects",
   "query": "",
   "method": "get",
@@ -40,11 +40,11 @@ D, [2020-02-02T10:53:08.349156 #29520] DEBUG -- : {
     "Version": "HTTP/1.1"
   }
 }
-I, [2020-02-02T10:53:08.349435 #29520]  INFO -- : Found matching response for GET /objects
-D, [2020-02-02T10:53:08.349498 #29520] DEBUG -- : {
+I, [2020-02-02T12:48:34.137606 #31903]  INFO -- : Found matching response for GET /objects
+D, [2020-02-02T12:48:34.137703 #31903] DEBUG -- : {
   "status": 200,
   "headers": {
-    "Content-Type": "application/json"
+    "Content-Type": "application/json; charset=utf-8"
   },
   "body": {
     "json_class": "Pact::ArrayLike",
@@ -55,6 +55,6 @@ D, [2020-02-02T10:53:08.349498 #29520] DEBUG -- : {
     "min": 1
   }
 }
-I, [2020-02-02T10:53:08.363476 #29520]  INFO -- : Verifying - interactions matched
-I, [2020-02-02T10:53:08.366357 #29520]  INFO -- : Cleared interactions
-I, [2020-02-02T10:53:08.369807 #29520]  INFO -- : Writing pact for backend to /Users/vadimdez/Documents/my_dev/pact-testing/frontend/pacts/frontend-backend.json
+I, [2020-02-02T12:48:34.161019 #31903]  INFO -- : Verifying - interactions matched
+I, [2020-02-02T12:48:34.164307 #31903]  INFO -- : Cleared interactions
+I, [2020-02-02T12:48:34.167599 #31903]  INFO -- : Writing pact for backend to /Users/vadimdez/Documents/my_dev/pact-testing/frontend/pacts/frontend-backend.json

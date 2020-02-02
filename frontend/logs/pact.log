@@ -1,7 +1,54 @@
-I, [2020-02-02T12:48:34.102520 #31903]  INFO -- : Verifying - interactions matched
-I, [2020-02-02T12:48:34.107673 #31903]  INFO -- : Cleared interactions
-I, [2020-02-02T12:48:34.113600 #31903]  INFO -- : Registered expected interaction GET /objects
-D, [2020-02-02T12:48:34.113804 #31903] DEBUG -- : {
+I, [2020-02-02T13:49:10.048680 #33666]  INFO -- : Verifying - interactions matched
+I, [2020-02-02T13:49:10.054491 #33666]  INFO -- : Cleared interactions
+I, [2020-02-02T13:49:10.060714 #33666]  INFO -- : Registered expected interaction GET /objects
+D, [2020-02-02T13:49:10.060895 #33666] DEBUG -- : {
+  "description": "get objects",
+  "providerState": "no objects",
+  "request": {
+    "method": "GET",
+    "path": "/objects"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8"
+    },
+    "body": [
+
+    ]
+  }
+}
+I, [2020-02-02T13:49:10.075544 #33666]  INFO -- : Received request GET /objects
+D, [2020-02-02T13:49:10.075645 #33666] DEBUG -- : {
+  "path": "/objects",
+  "query": "",
+  "method": "get",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Referer": "http://localhost/",
+    "User-Agent": "Mozilla/5.0 (darwin) AppleWebKit/537.36 (KHTML, like Gecko) jsdom/11.12.0",
+    "Accept-Language": "en",
+    "Origin": "http://localhost",
+    "Host": "127.0.0.1:8801",
+    "Accept-Encoding": "gzip, deflate",
+    "Connection": "close",
+    "Version": "HTTP/1.1"
+  }
+}
+I, [2020-02-02T13:49:10.075905 #33666]  INFO -- : Found matching response for GET /objects
+D, [2020-02-02T13:49:10.075970 #33666] DEBUG -- : {
+  "status": 200,
+  "headers": {
+    "Content-Type": "application/json; charset=utf-8"
+  },
+  "body": [
+
+  ]
+}
+I, [2020-02-02T13:49:10.088978 #33666]  INFO -- : Verifying - interactions matched
+I, [2020-02-02T13:49:10.091778 #33666]  INFO -- : Cleared interactions
+I, [2020-02-02T13:49:10.095120 #33666]  INFO -- : Registered expected interaction GET /objects
+D, [2020-02-02T13:49:10.095262 #33666] DEBUG -- : {
   "description": "get objects",
   "providerState": "have objects",
   "request": {
@@ -23,8 +70,8 @@ D, [2020-02-02T12:48:34.113804 #31903] DEBUG -- : {
     }
   }
 }
-I, [2020-02-02T12:48:34.137185 #31903]  INFO -- : Received request GET /objects
-D, [2020-02-02T12:48:34.137303 #31903] DEBUG -- : {
+I, [2020-02-02T13:49:10.100646 #33666]  INFO -- : Received request GET /objects
+D, [2020-02-02T13:49:10.100751 #33666] DEBUG -- : {
   "path": "/objects",
   "query": "",
   "method": "get",
@@ -40,8 +87,8 @@ D, [2020-02-02T12:48:34.137303 #31903] DEBUG -- : {
     "Version": "HTTP/1.1"
   }
 }
-I, [2020-02-02T12:48:34.137606 #31903]  INFO -- : Found matching response for GET /objects
-D, [2020-02-02T12:48:34.137703 #31903] DEBUG -- : {
+I, [2020-02-02T13:49:10.100853 #33666]  INFO -- : Found matching response for GET /objects
+D, [2020-02-02T13:49:10.100908 #33666] DEBUG -- : {
   "status": 200,
   "headers": {
     "Content-Type": "application/json; charset=utf-8"
@@ -55,6 +102,6 @@ D, [2020-02-02T12:48:34.137703 #31903] DEBUG -- : {
     "min": 1
   }
 }
-I, [2020-02-02T12:48:34.161019 #31903]  INFO -- : Verifying - interactions matched
-I, [2020-02-02T12:48:34.164307 #31903]  INFO -- : Cleared interactions
-I, [2020-02-02T12:48:34.167599 #31903]  INFO -- : Writing pact for backend to /Users/vadimdez/Documents/my_dev/pact-testing/frontend/pacts/frontend-backend.json
+I, [2020-02-02T13:49:10.105042 #33666]  INFO -- : Verifying - interactions matched
+I, [2020-02-02T13:49:10.107722 #33666]  INFO -- : Cleared interactions
+I, [2020-02-02T13:49:10.110891 #33666]  INFO -- : Writing pact for backend to /Users/vadimdez/Documents/my_dev/pact-testing/frontend/pacts/frontend-backend.json

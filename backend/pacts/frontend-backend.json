@@ -5,7 +5,24 @@
   "provider": {
     "name": "backend"
   },
-  "interactions": [
+  "interactions": [{
+      "description": "get objects",
+      "providerState": "no objects",
+      "request": {
+        "method": "GET",
+        "path": "/objects"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json; charset=utf-8"
+        },
+        "body": [
+
+        ]
+      },
+      "metadata": null
+    },
     {
       "description": "get objects",
       "providerState": "have objects",
@@ -18,12 +35,10 @@
         "headers": {
           "Content-Type": "application/json; charset=utf-8"
         },
-        "body": [
-          {
-            "id": 1,
-            "name": "Object #1"
-          }
-        ],
+        "body": [{
+          "id": 1,
+          "name": "Object #1"
+        }],
         "matchingRules": {
           "$.body": {
             "min": 1

@@ -3,8 +3,7 @@ import {
   Pact
 } from "@pact-foundation/pact";
 import {
-  eachLike,
-  like
+  eachLike
 } from "@pact-foundation/pact/dsl/matchers";
 
 import {
@@ -41,6 +40,28 @@ describe("API PACT tests", () => {
   });
 
   describe("get object", () => {
+    it("should return empty list when no objects", async () => {
+      await provider.addInteraction({
+        state: "no objects",
+        uponReceiving: "get objects",
+        withRequest: {
+          method: "GET",
+          path: "/objects",
+        },
+        willRespondWith: {
+          status: 200,
+          headers: {
+            'Content-Type': 'application/json; charset=utf-8'
+          },
+          body: []
+        }
+      });
+
+      const api = new API(provider.mockService.baseUrl);
+
+      expect(await api.getObjects()).toStrictEqual([]);
+    });
+
     it("should get list with objects", async () => {
       const object = {
         id: 1,

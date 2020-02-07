@@ -13,3 +13,8 @@ By running `npm test` in the `frontend` folder - will generate a contract for th
 To test `backend` against new contract:
 1. copy newly generated contract to [backend/pacts/frontend-backend.json](backend/pacts/frontend-backend.json)
 1. run `npm test` inside `backend` folder
+
+
+## License
+
+[MIT](https://tldrlegal.com/license/mit-license) © [Vadym Yatsyuk](https://github.com/vadimdez)

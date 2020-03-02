@@ -1,14 +1,8 @@
 import path from "path";
-import {
-  Pact
-} from "@pact-foundation/pact";
-import {
-  eachLike
-} from "@pact-foundation/pact/dsl/matchers";
+import { Pact } from "@pact-foundation/pact";
+import { eachLike } from "@pact-foundation/pact/dsl/matchers";
 
-import {
-  API
-} from "./api";
+import { API } from "./api";
 
 const provider = new Pact({
   consumer: "frontend",
@@ -34,24 +28,23 @@ describe("API PACT tests", () => {
     return provider.finalize();
   });
 
-
   it("should return true", () => {
     expect(true).toBe(true);
   });
 
-  describe("get object", () => {
-    it("should return empty list when no objects", async () => {
+  describe("get cars", () => {
+    it("should return empty list when no cars", async () => {
       await provider.addInteraction({
-        state: "no objects",
-        uponReceiving: "get objects",
+        state: "no cars",
+        uponReceiving: "get cars",
         withRequest: {
           method: "GET",
-          path: "/objects",
+          path: "/cars"
         },
         willRespondWith: {
           status: 200,
           headers: {
-            'Content-Type': 'application/json; charset=utf-8'
+            "Content-Type": "application/json; charset=utf-8"
           },
           body: []
         }
@@ -59,34 +52,34 @@ describe("API PACT tests", () => {
 
       const api = new API(provider.mockService.baseUrl);
 
-      expect(await api.getObjects()).toStrictEqual([]);
+      expect(await api.getCars()).toStrictEqual([]);
     });
 
-    it("should get list with objects", async () => {
-      const object = {
+    it("should get list with cars", async () => {
+      const car = {
         id: 1,
-        name: "Object #1"
+        name: "Car #1"
       };
 
       await provider.addInteraction({
-        state: "have objects",
-        uponReceiving: "get objects",
+        state: "have cars",
+        uponReceiving: "get cars",
         withRequest: {
           method: "GET",
-          path: "/objects",
+          path: "/cars"
         },
         willRespondWith: {
           status: 200,
           headers: {
-            'Content-Type': 'application/json; charset=utf-8'
+            "Content-Type": "application/json; charset=utf-8"
           },
-          body: eachLike(object)
+          body: eachLike(car)
         }
       });
 
       const api = new API(provider.mockService.baseUrl);
 
-      expect(await api.getObjects()).toStrictEqual([object]);
+      expect(await api.getCars()).toStrictEqual([car]);
     });
   });
 });

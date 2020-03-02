@@ -5,12 +5,29 @@
   "provider": {
     "name": "backend"
   },
-  "interactions": [{
-      "description": "get objects",
-      "providerState": "no objects",
+  "interactions": [
+    {
+      "description": "get cars",
+      "providerState": "no cars",
       "request": {
         "method": "GET",
-        "path": "/objects"
+        "path": "/cars"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json; charset=utf-8"
+        },
+        "body": []
+      },
+      "metadata": null
+    },
+    {
+      "description": "get cars",
+      "providerState": "have cars",
+      "request": {
+        "method": "GET",
+        "path": "/cars"
       },
       "response": {
         "status": 200,
@@ -18,27 +35,11 @@
           "Content-Type": "application/json; charset=utf-8"
         },
         "body": [
-
-        ]
-      },
-      "metadata": null
-    },
-    {
-      "description": "get objects",
-      "providerState": "have objects",
-      "request": {
-        "method": "GET",
-        "path": "/objects"
-      },
-      "response": {
-        "status": 200,
-        "headers": {
-          "Content-Type": "application/json; charset=utf-8"
-        },
-        "body": [{
-          "id": 1,
-          "name": "Object #1"
-        }],
+          {
+            "id": 1,
+            "name": "Car #1"
+          }
+        ],
         "matchingRules": {
           "$.body": {
             "min": 1

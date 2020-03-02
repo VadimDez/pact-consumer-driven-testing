@@ -4,10 +4,10 @@ class API {
   constructor(baseURL) {
     this.baseURL = baseURL;
   }
-  async getObjects() {
-    const result = await axios.get(this.baseURL + "/objects", {
+  async getCars() {
+    const result = await axios.get(this.baseURL + "/cars", {
       headers: {
-        'Content-Type': 'application/json'
+        "Content-Type": "application/json"
       }
     });
 
@@ -15,6 +15,4 @@ class API {
   }
 }
 
-export {
-  API
-};
+export { API };

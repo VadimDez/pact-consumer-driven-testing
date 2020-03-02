@@ -7,11 +7,11 @@
   },
   "interactions": [
     {
-      "description": "get objects",
-      "providerState": "no objects",
+      "description": "get cars",
+      "providerState": "no cars",
       "request": {
         "method": "GET",
-        "path": "/objects"
+        "path": "/cars"
       },
       "response": {
         "status": 200,
@@ -25,11 +25,11 @@
       "metadata": null
     },
     {
-      "description": "get objects",
-      "providerState": "have objects",
+      "description": "get cars",
+      "providerState": "have cars",
       "request": {
         "method": "GET",
-        "path": "/objects"
+        "path": "/cars"
       },
       "response": {
         "status": 200,
@@ -39,7 +39,7 @@
         "body": [
           {
             "id": 1,
-            "name": "Object #1"
+            "name": "Car #1"
           }
         ],
         "matchingRules": {

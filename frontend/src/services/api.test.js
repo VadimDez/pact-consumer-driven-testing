@@ -1,8 +1,6 @@
 import axios from "axios";
 
-import {
-  API
-} from "./api";
+import { API } from "./api";
 
 jest.mock("axios");
 
@@ -17,30 +15,33 @@ describe("API tests", () => {
     expect(true).toBe(true);
   });
 
-  it("should return objects", async () => {
-    const objects = [{
+  it("should return cars", async () => {
+    const cars = [
+      {
         id: 1,
-        name: "Object #1"
+        name: "Car #1"
       },
       {
         id: 2,
-        name: "Object #2"
+        name: "Car #2"
       }
     ];
 
-    axios.get.mockImplementationOnce(() => Promise.resolve({
-      data: objects
-    }));
+    axios.get.mockImplementationOnce(() =>
+      Promise.resolve({
+        data: cars
+      })
+    );
 
-    const result = await api.getObjects();
+    const result = await api.getCars();
 
-    expect(result).toBe(objects);
+    expect(result).toBe(cars);
   });
 
   it("should throw an error", async () => {
     const error = "Error";
     axios.get.mockImplementationOnce(() => Promise.reject(new Error(error)));
 
-    await expect(api.getObjects()).rejects.toThrow(error);
+    await expect(api.getCars()).rejects.toThrow(error);
   });
 });
